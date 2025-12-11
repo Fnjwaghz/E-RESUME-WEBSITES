@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<section id="certificate-section">
+    <h2 class="cert-title">My Certificates</h2>
+
+    <div class="certificate-container">
+        <!-- FIRST 3 CERTIFICATES (shown by default) -->
+        <div class="cert-card">
+            <img src="cer1.jpeg" alt="Certificate 1">
+        </div>
+
+        <div class="cert-card">
+            <img src="cer2.jpeg" alt="Certificate 2">
+        </div>
+
+        <div class="cert-card">
+            <img src="cer3.jpeg" alt="Certificate 3">
+        </div>
+
+        <!-- HIDDEN CERTIFICATES (Show More) -->
+        <div class="cert-card hidden-cert">
+            <img src="cer4.jpg" alt="Certificate 4">
+        </div>
+
+        <div class="cert-card hidden-cert">
+            <img src="cer5.jpg" alt="Certificate 5">
+        </div>
+
+        <div class="cert-card hidden-cert">
+            <img src="cer6.jpg" alt="Certificate 6">
+        </div>
+    </div>
+
+    <button id="showMoreBtn">See More Certificate</button>
+</section>
+
+<script>
+    const btn = document.getElementById("showMoreBtn");
+    const hidden = document.querySelectorAll(".hidden-cert");
+    let isOpen = false;
+
+    btn.addEventListener("click", () => {
+        hidden.forEach(card => card.classList.toggle("show"));
+
+        if (!isOpen) {
+            btn.textContent = "Show Less";
+            isOpen = true;
+        } else {
+            btn.textContent = "See More Certificate";
+            isOpen = false;
+        }
+    });
+</script>
+<p class="copyright">© 2025. Farah Najwa Binti Ghazali. All Rights Reserved.</p>
+    </div>
+
+
